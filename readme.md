@@ -48,3 +48,13 @@ python main_pretrain.py --config configs/config.yaml
 ##  Citation
 Soon!
 
+## Acknowledgements
+
+This repository builds upon the following prior work:
+
+- [MAE (Masked Autoencoders)](https://github.com/facebookresearch/mae) by He et al., CVPR 2022 – for the backbone architecture and reconstruction framework.
+- [Jigsaw-ViT](https://github.com/ubc-vision/Jigsaw-ViT) by Mishra et al., WACV 2022 – for the spatial reasoning task and permutation prediction.
+- [SimCLR](https://github.com/google-research/simclr) by Chen et al., ICML 2020 – for the contrastive learning formulation and augmentation pipeline.
+
+We thank the authors for their contributions to open-source research.
+
