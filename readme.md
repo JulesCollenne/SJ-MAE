@@ -5,7 +5,7 @@ Our approach integrates multiple self-supervised objectives—masked autoencodin
 
 ---
 
-![SJ-MAE Framework](FIG1.pdf)  
+![SJ-MAE Framework](sjmae.png)  
 *Overview of the SJ-MAE framework.* The model builds on Masked Autoencoders (MAE) by introducing two lightweight, auxiliary branches: (1) a *jigsaw task branch*, which promotes spatial reasoning by predicting the permutation of shuffled visible patches, and (2) a *contrastive branch*, which enhances instance-level discrimination by aligning different views of the same image. All three tasks share a single ViT encoder, encouraging the learning of both global semantics and local structure through multi-task supervision.
 
 ---
