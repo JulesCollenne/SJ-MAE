@@ -53,7 +53,7 @@ Soon!
 This repository builds upon the following prior work:
 
 - [MAE (Masked Autoencoders)](https://github.com/facebookresearch/mae) by He et al., CVPR 2022 – for the backbone architecture and reconstruction framework.
-- [Jigsaw-ViT](https://github.com/yingyichen-cyy/JigsawViT)) by Chen et al., Pattern Recognition Letters – for the spatial reasoning task and permutation prediction.
+- [Jigsaw-ViT](https://github.com/yingyichen-cyy/JigsawViT) by Chen et al., Pattern Recognition Letters – for the spatial reasoning task and permutation prediction.
 - [SimCLR](https://github.com/google-research/simclr) by Chen et al., ICML 2020 – for the contrastive learning formulation and augmentation pipeline.
 
 We thank the authors for their contributions to open-source research.
