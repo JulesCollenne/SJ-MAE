@@ -1,0 +1,6 @@
+dataset: isic
+
+finetune: ./output_dir/sjmae/checkpoint-799.pth
+
+nb_classes: 2
+

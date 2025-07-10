@@ -1,0 +1,4 @@
+dataset: isic
+nb_classes: 2
+data_path: /media/jules/Transcend/Datasets/isic/ISIC_2020/
+

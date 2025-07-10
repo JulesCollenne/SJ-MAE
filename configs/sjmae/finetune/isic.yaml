@@ -1,0 +1,11 @@
+dataset: isic
+
+csv_path: "/media/jules/Transcend/Datasets/isic/ISIC_2020/"
+
+finetune: ./output_dir/sjmae/checkpoint-400.pth
+
+data_path: ./data/
+output_dir: ./output_dir/
+
+nb_classes: 2
+

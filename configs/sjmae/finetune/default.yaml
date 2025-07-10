@@ -1,0 +1,58 @@
+dataset: 
+input_size: 224
+model: vit_base_patch16
+arch: sjmae
+
+batch_size: 4
+epochs: 50
+warmup_epochs: 5
+csv_path: ""
+ckp_interval: 50
+drop_path: 0.1
+clip_grad:
+
+resume: ''
+finetune: ./checkpoints/mask_ratio_0.75_0.75/w_0.05_0.1/checkpoint-399.pth
+
+data_path: ""
+output_dir: ./output_dir/
+
+accum_iter: 1
+weight_decay: 0.05
+lr:
+blr: 0.001
+min_lr: 0.000001
+layer_decay: 0.75
+global_pool: False
+cls_token: False
+
+color_jitter:
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.
+
+reprob: PCT
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0
+cutmix: 0
+cutmix_minmax:
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+
+nb_classes: 
+topk: [1, 5]
+device: "cuda"
+seed: 0
+start_epoch: 0
+eval: False
+dist_eval: False
+num_workers: 8
+pin_mem: True
+no_pin_mem: False
+world_size: 1
+distributed: False
+dist_on_itp: True
+dist_url: "env://"
+global_rank: 0

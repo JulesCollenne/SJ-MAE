@@ -1,0 +1,4 @@
+dataset: food101
+
+nb_classes: 101
+

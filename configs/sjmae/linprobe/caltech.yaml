@@ -1,0 +1,4 @@
+dataset: caltech256
+finetune: ./output_dir/sjmae/caltech256/checkpoint-799.pth
+nb_classes: 257
+

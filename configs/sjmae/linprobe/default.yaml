@@ -1,0 +1,41 @@
+dataset:
+input_size: 224
+model: vit_base_patch16
+arch: sjmae
+
+nb_classes:
+
+test: False
+finetune: ./output_dir/sjmae/imagenette/mask_ratio_0.75_0.9/w_0.125_0.0/checkpoint-199.pth
+
+eval: False
+
+batch_size: 32
+epochs: 90
+warmup_epochs: 9
+ckp_interval: 50
+
+data_path: 
+output_dir: ./output_dir/
+
+accum_iter: 1
+weight_decay: 0
+lr:
+blr: 0.1
+min_lr: 0.
+global_pool: False
+cls_token: False
+
+topk: [1, 5]
+device: "cuda"
+seed: 0
+start_epoch: 0
+dist_eval: False
+num_workers: 8
+pin_mem: True
+no_pin_mem: False
+world_size: 1
+distributed: False
+dist_on_itp: True
+dist_url: "env://"
+global_rank: 0

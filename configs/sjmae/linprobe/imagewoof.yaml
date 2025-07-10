@@ -1,0 +1,6 @@
+dataset: imagewoof
+
+finetune: ./output_dir/sjmae/imagewoof/checkpoint-799.pth
+
+nb_classes: 10
+

@@ -1,0 +1,46 @@
+dataset:
+nb_classes:
+
+input_size: 224
+model: sj_mae_vit_base_patch16
+arch: sjmae
+batch_size: 2
+epochs: 400
+warmup_epochs: 10
+mask_ratio_mae: 0.75
+mask_ratio_jigsaw: 0.75
+ckp_interval: 50
+w_mae: 1.
+w_jigsaw: 1.
+w_siam: 1.
+print_freq: 100
+siam_augment: True
+
+resume:
+
+data_path: ""
+output_dir: ./output_dir/
+
+accum_iter: 8
+weight_decay: 0.05
+lr:
+blr: 0.002
+min_lr: 0.
+finetune:
+global_pool: False
+cls_token: False
+
+topk: [1, 5]
+device: "cuda"
+seed: 0
+start_epoch: 0
+eval: False
+dist_eval: False
+num_workers: 8
+pin_mem: True
+no_pin_mem: False
+world_size: 1
+distributed: False
+dist_on_itp: True
+dist_url: "env://"
+global_rank: 0

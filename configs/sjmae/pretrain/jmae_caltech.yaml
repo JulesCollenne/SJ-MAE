@@ -1,0 +1,5 @@
+dataset: caltech256
+nb_classes: 257
+
+use_siamese: False
+

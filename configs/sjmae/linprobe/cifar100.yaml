@@ -1,0 +1,8 @@
+dataset: cifar100
+input_size: 32
+model: vit_cifar
+
+finetune: ./output_dir/sjmae/cifar100/checkpoint-799.pth
+
+nb_classes: 100
+

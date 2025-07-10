@@ -1,0 +1,4 @@
+dataset: imagenette
+
+nb_classes: 10
+

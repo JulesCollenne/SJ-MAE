@@ -1,0 +1,44 @@
+dataset: cifar100
+input_size: 32
+model: vit_cifar
+arch: sjmae
+
+batch_size: 32
+epochs: 90
+warmup_epochs: 9
+mask_ratio: 0.7
+ckp_interval: 50
+use_jigsaw: True
+use_siamese: True
+w_jigsaw: 0.01
+w_siam: 1
+
+resume: ''
+finetune: ''
+
+data_path: ./data/
+output_dir: ./output_dir/
+
+accum_iter: 1
+weight_decay: 0
+lr:
+blr: 0.1
+min_lr: 0.
+global_pool: False
+cls_token: False
+
+nb_classes: 100
+topk: [1, 5]
+device: "cuda"
+seed: 0
+start_epoch: 0
+eval: False
+dist_eval: False
+num_workers: 8
+pin_mem: True
+no_pin_mem: False
+world_size: 1
+distributed: False
+dist_on_itp: True
+dist_url: "env://"
+global_rank: 0

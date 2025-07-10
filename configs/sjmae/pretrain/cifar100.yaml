@@ -1,0 +1,7 @@
+dataset: cifar100
+nb_classes: 100
+
+input_size: 32
+model: sj_mae_vit_cifar
+
+
