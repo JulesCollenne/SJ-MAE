@@ -1,11 +1,17 @@
 # SJ-MAE: Joint Masked, Jigsaw, and Contrastive Pretraining for Vision Transformers
 
-Welcome to the official repository for the paper "SJ-MAE: Joint Masked, Jigsaw, and Contrastive Pretraining for Vision Transformers"!
-Our approach is inspired by recent advancements in visual representation learning, including Masked AutoEncoders, Jigsaw-ViT, and SimSiam. It aims to create a more comprehensive model by integrating all these tasks.
+Welcome to the official repository for the paper **"SJ-MAE: Joint Masked, Jigsaw, and Contrastive Pretraining for Vision Transformers"**!  
+Our approach integrates multiple self-supervised objectives—masked autoencoding, jigsaw spatial reasoning, and contrastive learning—into a single, unified ViT encoder.
+
+---
+
+![SJ-MAE Framework](figs/FIG1.pdf)  
+*Overview of the SJ-MAE framework.* The model builds on Masked Autoencoders (MAE) by introducing two lightweight, auxiliary branches: (1) a *jigsaw task branch*, which promotes spatial reasoning by predicting the permutation of shuffled visible patches, and (2) a *contrastive branch*, which enhances instance-level discrimination by aligning different views of the same image. All three tasks share a single ViT encoder, encouraging the learning of both global semantics and local structure through multi-task supervision.
+
+---
 
 ## Abstract
-Multi-task self-supervised learning (SSL) remains mostly underexplored despite the recent advances in SLL and their diverse set of pretext objectives. Combining multiple objectives during pretraining could open new possibilities and make learnt representations more robust. Following this idea, we present SJ-MAE, a unified framework that combines masked image modeling, spatial reasoning through jigsaw puzzles, and contrastive alignment within a single ViT encoder. This joint training enforces both low-level reconstruction and high-level semantic discrimination, leading to stronger and more versatile representations. We analyze the interplay between tasks and show how loss balancing and positional encoding design are critical to success. Our results suggest that a well-designed multi-task SSL framework can surpass the limitations of single-task pretext learning at the cost of more heavy computations.
-
+Self-supervised learning (SSL) has emerged as a powerful paradigm for learning visual representations without labels. While most approaches focus on a single pretext task such as masked image modeling or contrastive learning, this limits the diversity of supervisory signals and the generality of learned features. In this work, we explore a multi-task approach to SSL and propose \textbf{SJ-MAE}, a unified framework that jointly combines \emph{masked image reconstruction}, \emph{jigsaw spatial reasoning}, and \emph{siamese contrastive task} within a single Vision Transformer (ViT) encoder. Each task contributes complementary inductive biases, encouraging the model to capture both local structure and global semantics. We analyze the synergy between these tasks, study the impact of loss balancing, and evaluate the resulting representations across several transfer benchmarks. Our results show that SJ-MAE consistently outperforms single-task baselines and prior dual-task methods, confirming the value of multi-task SSL for robust and transferable vision models.
 
 ## Repository Structure
 The code will generate missing folders if they do not exist.
